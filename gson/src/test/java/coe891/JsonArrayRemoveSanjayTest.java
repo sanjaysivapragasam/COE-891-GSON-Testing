@@ -1,6 +1,10 @@
-package com.google.gson;
+package coe891;
 import static org.junit.Assert.*;
 import org.junit.Test;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonPrimitive;
 
 public class JsonArrayRemoveSanjayTest {
 
