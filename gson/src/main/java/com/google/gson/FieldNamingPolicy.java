@@ -189,7 +189,7 @@ public enum FieldNamingPolicy implements FieldNamingStrategy {
   }
 
   /** Ensures the JSON field names begins with an upper case letter. */
-  static String upperCaseFirstLetter(String s) {
+  public static String upperCaseFirstLetter(String s) {
     int length = s.length();
     for (int i = 0; i < length; i++) {
       char c = s.charAt(i);

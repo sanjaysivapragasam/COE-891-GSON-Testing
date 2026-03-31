@@ -1,10 +1,11 @@
-package com.google.gson;
+package coe891;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
+import com.google.gson.FieldNamingPolicy;
 import org.junit.Test;
 
-public class FieldNamingPolicyTestDMC {
+public class FieldNamingPolicyTestDmc {
 
   // C1: Content of first character
 

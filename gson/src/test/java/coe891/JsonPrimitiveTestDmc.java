@@ -1,10 +1,12 @@
-package com.google.gson;
+package coe891;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
+import com.google.gson.JsonPrimitive;
 import org.junit.Test;
 
-public class JsonPrimitiveTestDMC {
+public class JsonPrimitiveTestDmc {
 
   // GetAsString Tests
   // B1: String
@@ -140,15 +142,25 @@ public class JsonPrimitiveTestDMC {
 
   // B3: Boolean
 
-  @Test(expected = UnsupportedOperationException.class)
+  @Test
   public void getAsNumber_booleanTrue() {
-    JsonPrimitive p = new JsonPrimitive(true);
-    p.getAsNumber();
+    try {
+      JsonPrimitive p = new JsonPrimitive(true);
+      Number unused = p.getAsNumber();
+      assertTrue(false);
+    } catch (UnsupportedOperationException e) {
+      assertTrue(true);
+    }
   }
 
-  @Test(expected = UnsupportedOperationException.class)
+  @Test
   public void getAsNumber_booleanFalse() {
-    JsonPrimitive p = new JsonPrimitive(false);
-    p.getAsNumber();
+    try {
+      JsonPrimitive p = new JsonPrimitive(false);
+      Number unused = p.getAsNumber();
+      assertTrue(false);
+    } catch (UnsupportedOperationException e) {
+      assertTrue(true);
+    }
   }
 }

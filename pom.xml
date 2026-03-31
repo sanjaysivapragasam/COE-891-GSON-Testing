@@ -81,6 +81,13 @@
 
   <dependencyManagement>
     <dependencies>
+    <!-- ChatUniTest starter -->
+      <dependency>
+        <groupId>io.github.ZJU-ACES-ISE</groupId>
+        <artifactId>chatunitest-starter</artifactId>
+        <version>1.4.0</version>
+        <type>pom</type>
+      </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -97,6 +104,22 @@
 
   <build>
     <plugins>
+        <!-- ChatUniTest Maven plugin -->
+      <plugin>
+        <groupId>io.github.zju-aces-ise</groupId>
+        <artifactId>chatunitest-maven-plugin</artifactId>
+        <version>2.1.1</version> <!-- or latest -->
+        <configuration>
+        <!-- Dummy key: required by plugin but ignored by Ollama -->
+        <apiKeys>dummy-key</apiKeys>
+        <!-- Model name supported by both ChatUniTest and Ollama -->
+        <model>codeqwen:v1.5-chat</model>
+        <!-- Local OpenAI-compatible endpoint from Ollama -->
+        <url>http://10.0.0.103:11434/v1/chat/completions</url>
+        <!-- Optional: number of tests per method (default is 5) -->
+        <!-- <testNumber>6</testNumber> -->
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
