@@ -2,11 +2,14 @@ package coe891;
 
 import static org.junit.Assert.assertTrue;
 
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 import com.google.gson.internal.NumberLimits;
 import java.math.BigDecimal;
 import java.util.Arrays;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+//import org.junit.Before;
+//import org.junit.Test;
 
 public class NumberLimitsParseBigDecimalTest {
   private static final int MAX_NUMBER_STRING_LENGTH = 10_000;
@@ -28,7 +31,7 @@ public class NumberLimitsParseBigDecimalTest {
   String posTooBigExpStr;
   String negTooBigExpStr;
 
-  @Before
+  @BeforeEach
   public void init() {
     nullStr = null;
     emptyStr = "";

@@ -1,10 +1,12 @@
 package coe891;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertTrue;
 
 import com.google.gson.JsonPrimitive;
-import org.junit.Test;
+//import org.junit.Test;
 
 public class JsonPrimitiveTestDmc {
 

@@ -1,11 +1,13 @@
 package coe891;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
+import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonPrimitive;
-import org.junit.Test;
+//import org.junit.Test;
 
 public class JsonArrayGetAsSingleElementSanjayTest {
 
